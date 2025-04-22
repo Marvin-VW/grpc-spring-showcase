@@ -1,6 +1,6 @@
 # gRPC Spring Boot Showcase 🚀
 
-Dieses Projekt vergleicht drei beliebte Spring Boot + gRPC Integrationen:
+This project compares three popular Spring Boot + gRPC integrations:
 
 - [`grpc-ecosystem/grpc-spring`](https://github.com/grpc-ecosystem/grpc-spring)
 - [`LogNet/grpc-spring-boot-starter`](https://github.com/LogNet/grpc-spring-boot-starter)
@@ -9,21 +9,36 @@ Dieses Projekt vergleicht drei beliebte Spring Boot + gRPC Integrationen:
 ## 📦 Setup
 
 ```bash
-# Repo clonen + Submodule initialisieren
-git clone https://github.com/dein-username/grpc-spring-showcase.git
+# Clone the repo + initialize submodules
+git clone https://github.com/your-username/grpc-spring-showcase.git
 cd grpc-spring-showcase
 git submodule update --init --recursive
 ```
 
-## ▶️ Ausführen
+## ▶️ Running
 ```bash
 ./run.sh [ecosystem|lognet|springup] [client|server|both]
-Beispiele:
+Examples:
 ./run.sh ecosystem both
 ./run.sh lognet client
 ./run.sh springup server
 ```
-## 🛠 Hinweise
-* Du brauchst Java 17+ und Gradle (Wrapper enthalten).
-* Die einzelnen Demos starten jeweils mit bootRun über Gradle.
-	•	both startet Server und Client parallel.
+
+## 🛠 Notes
+* You need Java 17+ and Gradle (Wrapper included).
+* Each demo starts with `bootRun` through Gradle.
+* `both` starts the server and client in parallel.
+
+**Experimental Setup:**
+
+These integrations are still experimental. You can test them using `grpcurl`:
+
+```bash
+grpcurl -d '{"name":"Hi"}' -plaintext localhost:9090 Simple.SayHello
+```
+
+To stop the server, use:
+
+```bash
+pkill -f 'java.*grpc'
+```
