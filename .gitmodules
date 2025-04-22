@@ -1,0 +1,9 @@
+[submodule "grpc-spring"]
+	path = grpc-spring
+	url = https://github.com/grpc-ecosystem/grpc-spring
+[submodule "lognet-grpc-spring"]
+	path = lognet-grpc-spring
+	url = https://github.com/LogNet/grpc-spring-boot-starter
+[submodule "spring-grpc-experimental"]
+	path = spring-grpc-experimental
+	url = https://github.com/spring-projects/spring-grpc
