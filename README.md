@@ -10,7 +10,7 @@ This project compares three popular Spring Boot + gRPC integrations:
 
 ```bash
 # Clone the repo + initialize submodules
-git clone https://github.com/your-username/grpc-spring-showcase.git
+git clone https://github.com/marvin-vw/grpc-spring-showcase.git
 cd grpc-spring-showcase
 git submodule update --init --recursive
 ```
